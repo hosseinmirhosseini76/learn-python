@@ -1,0 +1,23 @@
+import pandas as pd
+
+names = pd.read_excel("importData.xlsx", sheet_name="Sheet1")
+
+print(names)
+print("******************")
+print(names.head(1))
+print("******************")
+print(names.head(1)["name"])
+print("******************")
+print(names["age"])
+print("******************")
+print(names["age"] > 20)
+print("******************")
+print(names[names["height"].isin([170, 180])])
+print("******************")
+# print(names[(names["age"] == 23) | (names["age"] == 25)])
+# print("******************")
+# print((names.loc[names["age"] > 20, "name"]).head())
+# print("******************")
+# print(names.loc[0:1, ["height", "age"]])
+# print(names.loc[0:1])
+# print(names.iloc[0:1])
